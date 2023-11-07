@@ -1,0 +1,3 @@
+2023/11/07 16:50:48 {"callers":["E:/一大堆/github project/blog-service/main.go: 27 main.init.0"],"level":"info","message":"aiaa: go-programming-tour-book/blog-service","time":1699347048158015400}
+2023/11/07 16:52:53 {"callers":["E:/一大堆/github project/blog-service/main.go: 27 main.init.0"],"level":"info","message":"aiaa: go-programming-tour-book/blog-service","time":1699347173866007600}
+2023/11/07 16:56:29 {"callers":["E:/一大堆/github project/blog-service/main.go: 27 main.init.0"],"level":"info","message":"aiaa: go-programming-tour-book/blog-service","time":1699347389244611500}
