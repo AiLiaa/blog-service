@@ -1,0 +1,15 @@
+初始化
+go mod init github.com/AiLiaa/blog-service
+
+gin框架
+go get -u github.com/gin-gonic/gin@v1.6.3
+
+文件配置的读取
+go get -u github.com/spf13/viper@v1.4.0
+
+ORM 库
+go get -u github.com/jinzhu/gorm@v1.9.12
+
+日志
+go get -u gopkg.in/natefinch/lumberjack.v2
+
