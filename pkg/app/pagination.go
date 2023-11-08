@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/AiLiaa/blog-service/global"
-	"github.com/AiLiaa/blog-service/utils/convert"
+	"github.com/AiLiaa/blog-service/pkg/convert"
 	"github.com/gin-gonic/gin"
 )
 

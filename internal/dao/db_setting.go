@@ -3,7 +3,7 @@ package dao
 import (
 	"fmt"
 	"github.com/AiLiaa/blog-service/global"
-	"github.com/AiLiaa/blog-service/utils/setting"
+	"github.com/AiLiaa/blog-service/pkg/setting"
 	"github.com/jinzhu/gorm"
 )
 
