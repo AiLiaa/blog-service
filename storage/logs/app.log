@@ -1,3 +1,9 @@
 2023/11/07 16:50:48 {"callers":["E:/一大堆/github project/blog-service/main.go: 27 main.init.0"],"level":"info","message":"aiaa: go-programming-tour-book/blog-service","time":1699347048158015400}
 2023/11/07 16:52:53 {"callers":["E:/一大堆/github project/blog-service/main.go: 27 main.init.0"],"level":"info","message":"aiaa: go-programming-tour-book/blog-service","time":1699347173866007600}
 2023/11/07 16:56:29 {"callers":["E:/一大堆/github project/blog-service/main.go: 27 main.init.0"],"level":"info","message":"aiaa: go-programming-tour-book/blog-service","time":1699347389244611500}
+2023/11/08 15:11:00 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1699427460098890200}
+2023/11/08 15:12:00 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1699427520355527200}
+2023/11/08 15:29:58 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Key: 'State' Error:Field validation for 'State' failed on the 'oneof' tag","time":1699428598672478100}
+2023/11/08 15:33:30 {"callers":["E:/一大堆/github project/blog-service/main.go: 41 main.init.0"],"level":"error","message":"app.BindAndValid errs: Key: 'State' Error:Field validation for 'State' failed on the 'oneof' tag","time":1699428810530267200}
+2023/11/08 15:33:33 {"callers":["E:/一大堆/github project/blog-service/main.go: 41 main.init.0"],"level":"error","message":"app.BindAndValid errs: Key: 'State' Error:Field validation for 'State' failed on the 'oneof' tag","time":1699428813736241800}
+2023/11/08 15:42:28 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1699429348662495000}

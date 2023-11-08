@@ -13,7 +13,7 @@ go get -u github.com/jinzhu/gorm@v1.9.12
 日志
 go get -u gopkg.in/natefinch/lumberjack.v2
 
-Swagger
+接口文档Swagger
 go get -u github.com/swaggo/swag/cmd/swag@v1.6.5
 go get -u github.com/swaggo/gin-swagger@v1.2.0
 go get -u github.com/swaggo/files
@@ -23,3 +23,6 @@ go get -u github.com/alecthomas/template
 执行go build
 得到swag.exe
 复制到go/bin文件夹中
+
+参数校验validator
+go get -u github.com/go-playground/validator/v10

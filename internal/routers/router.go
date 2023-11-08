@@ -10,8 +10,10 @@ import (
 
 func NewRouter() *gin.Engine {
 	r := gin.New()
-	r.Use(gin.Logger())
-	r.Use(gin.Recovery())
+	r.Use(gin.Logger())   //gin日志
+	r.Use(gin.Recovery()) //gin恢复
+	//r.Use(middleware.Translations()) //validator 参数校验翻译中间件（这样会重复注册）
+
 	url := ginSwagger.URL("http://127.0.0.1:8000/swagger/doc.json")
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
 
