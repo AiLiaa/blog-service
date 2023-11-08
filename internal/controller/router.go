@@ -1,8 +1,8 @@
-package routers
+package controller
 
 import (
 	_ "github.com/AiLiaa/blog-service/docs"
-	v1 "github.com/AiLiaa/blog-service/internal/routers/api/v1"
+	v1 "github.com/AiLiaa/blog-service/internal/controller/api/v1"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"

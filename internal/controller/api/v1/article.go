@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"github.com/AiLiaa/blog-service/pkg/app"
-	"github.com/AiLiaa/blog-service/pkg/errcode"
+	"github.com/AiLiaa/blog-service/utils/app"
+	"github.com/AiLiaa/blog-service/utils/errcode"
 	"github.com/gin-gonic/gin"
 )
 

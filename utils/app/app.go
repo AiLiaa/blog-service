@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/AiLiaa/blog-service/pkg/errcode"
+	"github.com/AiLiaa/blog-service/utils/errcode"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )

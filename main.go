@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/AiLiaa/blog-service/global"
-	"github.com/AiLiaa/blog-service/internal/model"
-	routers "github.com/AiLiaa/blog-service/internal/routers"
-	"github.com/AiLiaa/blog-service/pkg/logger"
-	"github.com/AiLiaa/blog-service/pkg/setting"
+	routers "github.com/AiLiaa/blog-service/internal/controller"
+	"github.com/AiLiaa/blog-service/internal/dao"
+	"github.com/AiLiaa/blog-service/utils/logger"
+	"github.com/AiLiaa/blog-service/utils/setting"
 	"github.com/gin-gonic/gin"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
@@ -77,7 +77,7 @@ func setupSetting() error {
 
 func setupDBEngine() error {
 	var err error
-	global.DBEngine, err = model.NewDBEngine(global.DatabaseSetting)
+	global.DBEngine, err = dao.NewDBEngine(global.DatabaseSetting)
 	if err != nil {
 		return err
 	}

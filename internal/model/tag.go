@@ -1,6 +1,6 @@
 package model
 
-import "github.com/AiLiaa/blog-service/pkg/app"
+import "github.com/AiLiaa/blog-service/utils/app"
 
 type Tag struct {
 	*Model

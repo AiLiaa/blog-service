@@ -1,8 +1,8 @@
 package global
 
 import (
-	"github.com/AiLiaa/blog-service/pkg/logger"
-	"github.com/AiLiaa/blog-service/pkg/setting"
+	"github.com/AiLiaa/blog-service/utils/logger"
+	"github.com/AiLiaa/blog-service/utils/setting"
 	"github.com/jinzhu/gorm"
 )
 
