@@ -1,5 +1,7 @@
 package model
 
+import "github.com/AiLiaa/blog-service/pkg/app"
+
 type Article struct {
 	*Model
 	Title         string `json:"title"`
@@ -11,4 +13,10 @@ type Article struct {
 
 func (a Article) TableName() string {
 	return "blog_article"
+}
+
+// ArticleSwagger 用于 Swagger 接口文档展示
+type ArticleSwagger struct {
+	List  []*Article
+	Pager *app.Pager
 }

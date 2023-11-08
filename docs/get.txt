@@ -13,3 +13,13 @@ go get -u github.com/jinzhu/gorm@v1.9.12
 日志
 go get -u gopkg.in/natefinch/lumberjack.v2
 
+Swagger
+go get -u github.com/swaggo/swag/cmd/swag@v1.6.5
+go get -u github.com/swaggo/gin-swagger@v1.2.0
+go get -u github.com/swaggo/files
+go get -u github.com/alecthomas/template
+问题：找不到swag指令
+找到GOPATH \pkg\mod\github.com\swaggo\swag@v1.6.5\cmd\swag下的main.go
+执行go build
+得到swag.exe
+复制到go/bin文件夹中
