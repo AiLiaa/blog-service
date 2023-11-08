@@ -3,7 +3,7 @@ package model
 import "github.com/AiLiaa/blog-service/pkg/app"
 
 type Article struct {
-	*Model
+	*Common
 	Title         string `json:"title"`
 	Desc          string `json:"desc"`
 	Content       string `json:"content"`

@@ -3,7 +3,7 @@ package model
 import "github.com/AiLiaa/blog-service/pkg/app"
 
 type Tag struct {
-	*Model
+	*Common
 	Name  string `json:"name"`
 	State uint8  `json:"state"`
 }
