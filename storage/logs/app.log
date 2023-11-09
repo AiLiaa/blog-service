@@ -7,3 +7,26 @@
 2023/11/08 15:33:30 {"callers":["E:/一大堆/github project/blog-service/main.go: 41 main.init.0"],"level":"error","message":"app.BindAndValid errs: Key: 'State' Error:Field validation for 'State' failed on the 'oneof' tag","time":1699428810530267200}
 2023/11/08 15:33:33 {"callers":["E:/一大堆/github project/blog-service/main.go: 41 main.init.0"],"level":"error","message":"app.BindAndValid errs: Key: 'State' Error:Field validation for 'State' failed on the 'oneof' tag","time":1699428813736241800}
 2023/11/08 15:42:28 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1699429348662495000}
+2023/11/09 16:17:15 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符","time":1699517835986876600}
+2023/11/09 16:17:37 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符","time":1699517857779486200}
+2023/11/09 16:18:39 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符","time":1699517919201329400}
+2023/11/09 16:29:09 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699518549759203900}
+2023/11/09 16:29:34 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699518574800590600}
+2023/11/09 16:29:54 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符,State为必填字段","time":1699518594405695800}
+2023/11/09 16:30:05 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699518605934913700}
+2023/11/09 16:43:14 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符","time":1699519394174360400}
+2023/11/09 16:44:34 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699519474178849100}
+2023/11/09 16:49:56 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1699519796001375000}
+2023/11/09 17:07:55 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符","time":1699520875401065600}
+2023/11/09 17:08:38 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1699520918033504800}
+2023/11/09 17:09:42 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1699520982372688700}
+2023/11/09 17:15:05 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1699521305858609700}
+2023/11/09 17:15:30 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521330354993200}
+2023/11/09 17:15:50 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521350816047900}
+2023/11/09 17:20:24 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521624626130600}
+2023/11/09 17:22:06 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521726674076900}
+2023/11/09 17:23:07 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521787212993500}
+2023/11/09 17:23:57 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521837750040900}
+2023/11/09 17:24:26 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521866650739800}
+2023/11/09 17:25:50 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符,State为必填字段","time":1699521950214859200}
+2023/11/09 17:25:58 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521958056184200}

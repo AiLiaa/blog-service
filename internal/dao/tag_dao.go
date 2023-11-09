@@ -1,15 +1,10 @@
 package dao
 
 import (
+	"fmt"
 	"github.com/AiLiaa/blog-service/internal/model"
 	"github.com/AiLiaa/blog-service/pkg/app"
 )
-
-type TagDao struct{}
-
-func NewTagDao() TagDao {
-	return TagDao{}
-}
 
 /*
 Common：指定运行 DB 操作的模型实例，默认解析该结构体的名字为表名，格式为大写驼峰转小写下划线驼峰。若情况特殊，也可以编写该结构体的 TableName 方法用于指定其对应返回的表名。
@@ -73,18 +68,20 @@ func (dao *Dao) CreateTag(name string, state uint8, createdBy string) error {
 }
 
 // UpdateTag 更新tag
-func (dao *Dao) UpdateTag(id uint32, name string, state uint8, modifiedBy string) error {
+func (dao *Dao) UpdateTag(id uint32, name string, state *uint8, modifiedBy string) error {
 	db := dao.engine
 	tag := model.Tag{
 		Name:   name,
-		State:  state,
+		State:  *state,
 		Common: &model.Common{ID: id, ModifiedBy: modifiedBy},
 	}
-	return db.Model(&model.Tag{}).Where("id = ? AND is_del = ?", tag.ID, 0).Update(tag).Error
+
+	fmt.Println(*state)
+	return db.Model(&tag).Where("id = ? AND is_del = ?", tag.ID, 0).Update(tag).Error
 }
 
-// Delete 删除tag
-func (dao *Dao) Delete(id uint32) error {
+// DeleteTag 删除tag
+func (dao *Dao) DeleteTag(id uint32) error {
 	db := dao.engine
 	tag := model.Tag{Common: &model.Common{ID: id}}
 	return db.Where("id = ? AND is_del = ?", tag.Common.ID, 0).Delete(&tag).Error

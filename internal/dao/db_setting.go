@@ -5,6 +5,7 @@ import (
 	"github.com/AiLiaa/blog-service/global"
 	"github.com/AiLiaa/blog-service/pkg/setting"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 // NewDBEngine 创建 DB 实例
