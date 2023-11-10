@@ -2,10 +2,13 @@ package controller
 
 import (
 	_ "github.com/AiLiaa/blog-service/docs"
+	"github.com/AiLiaa/blog-service/global"
+	"github.com/AiLiaa/blog-service/internal/controller/api"
 	v1 "github.com/AiLiaa/blog-service/internal/controller/api/v1"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
+	"net/http"
 )
 
 func NewRouter() *gin.Engine {
@@ -19,6 +22,12 @@ func NewRouter() *gin.Engine {
 
 	articleController := v1.NewArticleController()
 	tagController := v1.NewTagController()
+	uploadController := api.NewUploadController()
+
+	//上传文件
+	r.POST("/upload/file", uploadController.UploadFile)
+	//访问静态资源
+	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 
 	apiv1 := r.Group("/api/v1")
 	{
