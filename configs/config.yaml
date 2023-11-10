@@ -5,13 +5,22 @@ Server:
   ReadTimeout: 60
   WriteTimeout: 60
 
-# 日志配置 分页配置
+# 日志配置 分页配置 文件上传配置
 App:
   DefaultPageSize: 10
   MaxPageSize: 100
+
   LogSavePath: storage/logs
   LogFileName: app
   LogFileExt: .log
+
+  UploadSavePath: storage/uploads
+  UploadServerUrl: http://127.0.0.1:8000/static
+  UploadImageMaxSize: 5  # MB
+  UploadImageAllowExts:
+    - .jpg
+    - .jpeg
+    - .png
 
 # 数据库配置
 Database:
