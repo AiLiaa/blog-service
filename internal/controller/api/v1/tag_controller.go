@@ -9,13 +9,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type Tag struct{}
+type TagController struct{}
 
-func NewTag() Tag {
-	return Tag{}
+func NewTagController() TagController {
+	return TagController{}
 }
-
-func (t Tag) Get(c *gin.Context) {}
 
 // @Summary 获取多个标签
 // @Produce  json
@@ -27,7 +25,7 @@ func (t Tag) Get(c *gin.Context) {}
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags [get]
-func (t Tag) List(c *gin.Context) {
+func (t TagController) List(c *gin.Context) {
 	//入参校验和绑定
 	param := service.TagListRequest{}
 	response := app.NewResponse(c)
@@ -66,11 +64,11 @@ func (t Tag) List(c *gin.Context) {
 // @Param name body string true "标签名称" minlength(3) maxlength(100)
 // @Param state body int false "状态" Enums(0, 1) default(1)
 // @Param created_by body string true "创建者" minlength(3) maxlength(100)
-// @Success 200 {object} model.TagSwagger "成功"
+// @Success 200 "成功"
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags [post]
-func (t Tag) Create(c *gin.Context) {
+func (t TagController) Create(c *gin.Context) {
 	//入参校验和绑定
 	param := service.CreateTagRequest{}
 	response := app.NewResponse(c)
@@ -99,11 +97,11 @@ func (t Tag) Create(c *gin.Context) {
 // @Param name body string false "标签名称" minlength(3) maxlength(100)
 // @Param state body int false "状态" Enums(0, 1) default(1)
 // @Param modified_by body string true "修改者" minlength(3) maxlength(100)
-// @Success 200 {object} model.TagSwagger "成功"
+// @Success 200 "成功"
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags/{id} [put]
-func (t Tag) Update(c *gin.Context) {
+func (t TagController) Update(c *gin.Context) {
 	//入参校验和绑定
 	newState := convert.StrTo(c.Param("state")).MustUInt8()
 	param := service.UpdateTagRequest{
@@ -133,11 +131,11 @@ func (t Tag) Update(c *gin.Context) {
 // @Summary 删除标签
 // @Produce  json
 // @Param id path int true "标签 ID"
-// @Success 200 {object} model.TagSwagger "成功"
+// @Success 200 "成功"
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags/{id} [delete]
-func (t Tag) Delete(c *gin.Context) {
+func (t TagController) Delete(c *gin.Context) {
 	//入参校验和绑定
 	param := service.DeleteTagRequest{ID: convert.StrTo(c.Param("id")).MustUInt32()}
 	response := app.NewResponse(c)
