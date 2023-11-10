@@ -30,3 +30,9 @@
 2023/11/09 17:24:26 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521866650739800}
 2023/11/09 17:25:50 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符,State为必填字段","time":1699521950214859200}
 2023/11/09 17:25:58 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1699521958056184200}
+2023/11/10 13:35:59 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: ModifiedBy为必填字段,Id为必填字段,Desc为必填字段,Content为必填字段","time":1699594559490652800}
+2023/11/10 13:37:01 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Id为必填字段,Desc长度必须至少为1个字符,Content长度必须至少为1个字符","time":1699594621540145500}
+2023/11/10 13:37:19 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Id为必填字段","time":1699594639241978200}
+2023/11/10 13:37:42 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Id必须大于或等于1","time":1699594662297982100}
+2023/11/10 15:28:57 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"svc.CreateArticle err: unsupported destination, should be slice or struct","time":1699601337597062300}
+2023/11/10 15:41:18 {"callers":["E:/一大堆/github project/blog-service/main.go: 26 main.init.0"],"level":"error","message":"svc.CreateArticle err: unsupported destination, should be slice or struct","time":1699602078379563700}
