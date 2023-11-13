@@ -42,3 +42,14 @@ JWT:
   # 签发者
   Issuer: blog-service
   Expire: 7200
+
+# 发送电子邮件配置
+Email:
+  Host: smtp.qq.com
+  Port: 465
+  UserName: 1067550651@qq.com
+  Password: zjnvhzigxilebchb
+  IsSSL: true
+  From: 1067550651@qq.com
+  To:
+    - 1067550651@qq.com
