@@ -6,17 +6,33 @@ import (
 	"github.com/AiLiaa/blog-service/internal/config"
 	"github.com/AiLiaa/blog-service/internal/controller/api"
 	v1 "github.com/AiLiaa/blog-service/internal/controller/api/v1"
+	"github.com/AiLiaa/blog-service/pkg/limiter"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 	"net/http"
+	"time"
 )
+
+var methodLimiters = limiter.NewMethodLimiter().AddBuckets(limiter.LimiterBucketRule{
+	Key:          "/auth",
+	FillInterval: time.Second,
+	Capacity:     10,
+	Quantum:      10,
+})
 
 func NewRouter() *gin.Engine {
 	r := gin.New()
-	r.Use(gin.Logger())   //gin日志
-	r.Use(gin.Recovery()) //gin恢复
+	if global.ServerSetting.RunMode == "debug" {
+		r.Use(gin.Logger())
+		r.Use(gin.Recovery())
+	} else {
+		r.Use(config.AccessLog())
+		r.Use(config.Recovery())
+	}
 	//r.Use(config.Translations()) //validator 参数校验翻译中间件（这样会重复注册）
+	r.Use(config.RateLimiter(methodLimiters))      //限流
+	r.Use(config.ContextTimeout(60 * time.Second)) //超时
 
 	url := ginSwagger.URL("http://127.0.0.1:8000/swagger/doc.json")
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
