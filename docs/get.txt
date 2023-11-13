@@ -32,3 +32,6 @@ go get -u github.com/dgrijalva/jwt-go@v3.2.0
 
 发送电子邮件
 go get -u gopkg.in/gomail.v2
+
+令牌桶 实现限流器
+go get -u github.com/juju/ratelimit@v1.0.1
