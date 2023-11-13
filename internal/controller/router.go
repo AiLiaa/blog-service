@@ -3,6 +3,7 @@ package controller
 import (
 	_ "github.com/AiLiaa/blog-service/docs"
 	"github.com/AiLiaa/blog-service/global"
+	"github.com/AiLiaa/blog-service/internal/config"
 	"github.com/AiLiaa/blog-service/internal/controller/api"
 	v1 "github.com/AiLiaa/blog-service/internal/controller/api/v1"
 	"github.com/gin-gonic/gin"
@@ -29,7 +30,11 @@ func NewRouter() *gin.Engine {
 	//访问静态资源
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 
+	//JWT
+	r.POST("/auth", api.GetAuth)
+
 	apiv1 := r.Group("/api/v1")
+	apiv1.Use(config.JWT())
 	{
 		apiv1.POST("/tags", tagController.Create)
 		apiv1.DELETE("/tags/:id", tagController.Delete)
