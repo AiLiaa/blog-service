@@ -34,3 +34,11 @@ Database:
   ParseTime: True
   MaxIdleConns: 10
   MaxOpenConns: 30
+
+# JWT配置
+JWT:
+  # 密钥
+  Secret: aiaa
+  # 签发者
+  Issuer: blog-service
+  Expire: 7200
